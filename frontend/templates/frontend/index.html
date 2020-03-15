@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <!-- CSS imports -->
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'custom.css' %}"> <!-- Own edit -->
+</head>
+<body>
+    <div class="container">
+
+        <div id="task-container">
+
+            <!-- Add task form -->
+            <div id="form-wrapper">
+                <form id="form">
+                    <div class="flex-wrapper">
+                        <div style="flex: 6">
+                            <input id="title" class="form-control" name="title" 
+                            placeholder="Add Task" type="text">
+                        </div>
+                        <div style="flex: 1">
+                            <input id="submit" class="btn" type="submit" value="Add"> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Display tasks -->
+            <div id="list-wrapper">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JS imports -->
+    <script src="{% static 'jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'todo.js' %}"></script> <!-- Own edit -->
+</body>
+</html>
